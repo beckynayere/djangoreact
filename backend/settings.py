@@ -44,6 +44,12 @@ REST_FRAMEWORK = {
     )   
 }
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': os.getenv('ACCESS_TOKEN_LIFETIME'),
+    'REFRESH_TOKEN_LIFETIME': os.getenv('REFRESH_TOKEN_LIFETIME'),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True
+}
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
